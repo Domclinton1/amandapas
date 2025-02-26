@@ -7,7 +7,7 @@ const reviews = [
 
 let index = 0;
     function updateReview() {
-        index = (index + 1) % 6;
+        index = (index + 1) % 10;
         document.getElementById("reviewWrapper").style.transform = `translateX(-${index * 100}%)`;
     }
 setInterval(updateReview, 4000);
