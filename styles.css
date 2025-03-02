@@ -271,19 +271,32 @@ a {
 .carousel {
     width: 100%;
     max-width: 600px;
-    overflow: hidden;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     background: #FF006B;
     color: white;
     padding: 20px;
+    display: flex;
 }
+.carousel-container {
+    position: relative;
+    width: 100%;
+    max-width: 600px; /* Ajuste conforme necessário */
+    margin: auto;
+    overflow: hidden;
+}
+
 .review-wrapper {
     display: flex;
     transition: transform 0.5s ease-in-out;
+    white-space: nowrap;
 }
+
 .review {
-    min-width: 100%;
+    flex: 0 0 100%; /* Garante que cada review ocupa 100% da largura */
+    box-sizing: border-box;
     text-align: center;
     padding: 20px;
     display: flex;
@@ -292,6 +305,7 @@ a {
     gap: 3rem;
     text-align: left;
 }
+
 .review p {
     font-size: 2rem;
 }
@@ -307,6 +321,31 @@ a {
     justify-content: center;
     gap: 1rem;
     
+}
+.nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 24px;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+.nav-btn:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+#prevBtn {
+    left: 10px;
+}
+
+#nextBtn {
+    right: 10px;
 }
 
 .profile-img {

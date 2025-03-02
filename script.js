@@ -1,25 +1,4 @@
-const reviews = [
-    { name: "Lucas Ferreira", rating: "★★★★★", comment: "Internet muito rápida e estável! Suporte excelente." },
-    { name: "Mariana Souza", rating: "★★★★☆", comment: "Ótimo atendimento e planos acessíveis. Recomendo!" },
-    { name: "Rafael Mendes", rating: "★★★★★", comment: "Instalação foi super rápida e a conexão é incrível!" }
-];
 
-
-let index = 0;
-    function updateReview() {
-        index = (index + 1) % 10;
-        document.getElementById("reviewWrapper").style.transform = `translateX(-${index * 100}%)`;
-    }
-setInterval(updateReview, 4000);
-
-function toggleAnswer(element) {
-    let answer = element.nextElementSibling;
-        if (answer.style.display === "block") {
-            answer.style.display = "none";
-        } else {
-            answer.style.display = "block";
-        }
-}
   
 
 // Função para alternar imagens automaticamente
@@ -65,3 +44,52 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
+
+const reviewWrapper = document.getElementById("reviewWrapper");
+const prevBtn = document.getElementById("prevBtn");
+const nextBtn = document.getElementById("nextBtn");
+
+let index = 0;
+let reviewWidth = document.querySelector(".review").offsetWidth;
+const totalReviews = document.querySelectorAll(".review").length;
+
+// Função para atualizar a posição do carrossel
+function updateCarousel() {
+    reviewWrapper.style.transform = `translateX(${-index * reviewWidth}px)`;
+}
+
+// Atualiza a largura ao redimensionar a tela
+window.addEventListener("resize", () => {
+    reviewWidth = document.querySelector(".review").offsetWidth;
+    updateCarousel();
+});
+
+// Botão "Próximo"
+nextBtn.addEventListener("click", () => {
+    if (index < totalReviews - 1) {
+        index++;
+    } else {
+        index = 0; // Volta ao início
+    }
+    updateCarousel();
+});
+
+// Botão "Anterior"
+prevBtn.addEventListener("click", () => {
+    if (index > 0) {
+        index--;
+    } else {
+        index = totalReviews - 1; // Volta ao último
+    }
+    updateCarousel();
+});
+
+// Scroll automático a cada 5 segundos
+setInterval(() => {
+    if (index < totalReviews - 1) {
+        index++;
+    } else {
+        index = 0;
+    }
+    updateCarousel();
+}, 5000);
