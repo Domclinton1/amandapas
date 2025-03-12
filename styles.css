@@ -568,10 +568,10 @@ a {
 }
 
 .bonus-content {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    justify-content: space-between;
-    gap: 3rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
 }
 .bonus-item {
     width: 600px;
