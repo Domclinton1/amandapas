@@ -819,7 +819,8 @@ footer {
         width: 100%;
     }
     .solution-text ul li {
-        width: 90%;
+        width: 100%;
+        margin: 0 auto;
     }
     .metodo {
         max-width: 480px;
