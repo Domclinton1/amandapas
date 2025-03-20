@@ -879,10 +879,12 @@ footer {
     .curso-img  {
         max-width: 480px;
         width: 100%;
+        
     }
     .curso-img img {
         max-width: 480px;
         width: 90%;
+        
     }
     .curso .cta-box {
         max-width: 480px;
@@ -929,6 +931,11 @@ footer {
     .garantia img {
         max-width: 480px;
         width: 90%;
+    }
+    footer {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
     }
 
 }
@@ -1088,6 +1095,11 @@ footer {
     .garantia img {
         max-width: 768px;
         width: 90%;
+    }
+    footer {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
     }
 
 }
