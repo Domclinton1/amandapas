@@ -33,15 +33,16 @@ body {
 .hero-text {
     display: flex;
     flex-direction: column;
-    gap: 1.8rem;
+    gap: 1.5rem;
     flex: 1;
-    max-width: 70%;
+    max-width: 100%;
+    line-height: 0.9;
 }
 .hero-text h1 {
-    font-size: 2.8rem;
+    font-size: 2rem;
 }
 .hero-text p {
-    font-size: 2rem;
+    font-size: 1.3rem;
     font-weight: 600;
 }
 .hero-text ul {
@@ -307,7 +308,13 @@ a {
     flex-direction: column;
     align-items: center;
     gap: 3rem;
-    text-align: left;
+    text-align: center;
+    justify-content: center;
+}
+.review img {
+  max-width: 300px;
+  display: block;
+  margin: 0 auto;
 }
 
 .review p {
@@ -574,6 +581,7 @@ a {
     text-align: center;
 }
 
+
 .bonus-content {
     display: flex;
     flex-wrap: wrap;
@@ -597,6 +605,15 @@ a {
 .bonus-item img {
     width: 200px;
     border-radius: 12px;
+}
+
+.bonus-item .price span {
+    text-decoration: line-through;
+    font-weight: 500;
+}
+.bonus-item .price p {
+    font-weight: 700;
+    color: #25D366;
 }
 .price-container {
     max-width: 700px;
@@ -799,12 +816,13 @@ footer {
         width: 100%;
         max-width: 480px;
         text-align: center;
+        
     }
     .hero-text h1 {
-        font-size: 2.3rem;
+        font-size: 2rem;
     }
     .hero-text p {
-        font-size: 1.6rem;
+        font-size: 1.3rem;
     }
     .hero-img {
         max-width: 480px;
