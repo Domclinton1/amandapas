@@ -884,28 +884,28 @@ footer {
         margin: 0 auto;
     }
     .carousel {
-    overflow: hidden;
-    width: 100%;
+        overflow: hidden;
+        width: 100%;
     }
 
     .review {
-    width: 100%;
-    flex: 0 0 100%; /* Isso garante que cada slide ocupe 100% da largura */
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+        width: 100%;
+        flex: 0 0 100%; /* Isso garante que cada slide ocupe 100% da largura */
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
-    .review-wrapper {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-    white-space: nowrap;
+        .review-wrapper {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+        white-space: nowrap;
     }
     .carousel-container {
-  overflow: hidden;
-  position: relative;
-}
+        overflow: hidden;
+        position: relative;
+    }
 
 
 
