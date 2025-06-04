@@ -66,7 +66,7 @@ a {
 .cta {
 
     padding: 20px;
-    background-color: #FF006B;
+    background-color: #25d366;
     width: 60%;
     display: flex;
     align-items: center;
@@ -261,6 +261,9 @@ a {
     justify-content: center;
     gap: 3rem;
     margin-top: 30px;
+}
+.comentarios-section .cta {
+    margin: 30px auto;
 }
 .comentarios-section h2 {
     font-size: 2rem;
@@ -458,6 +461,7 @@ a {
 }
 .curso .cta-box .cta {
     width: 45%;
+    background-color: #25D366;
 }
 .curso-img img {
     border-radius: 15px;
